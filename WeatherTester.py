@@ -10,9 +10,8 @@ response = requests.get(url)
 
 if response.status_code == 200:
     data = response.json()
-    temp = data['main']['temp']
+    temp = round(data['main']['temp']-273.15,2)
     desc = data['weather'][0]['description']
-    print(f'Temperature: {temp} K')
-    print(f'Description: {desc}')
+    print(f'{temp} \u00b0C with {desc}')
 else:
     print('Error fetching weather data')
