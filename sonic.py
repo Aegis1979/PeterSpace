@@ -1,10 +1,10 @@
 #Raspberry Pi 4.0 code for interfacing with ultrasonic sensor
 
-import Rpi.GPIO as GPIO
+import RPi.GPIO as GPIO
 import time
 GPIO.setmode(GPIO.BCM)
 
-TRI_PIN=11
+TRIG_PIN=11
 ECHO_PIN=12
 
 GPIO.setup(TRIG_PIN, GPIO.OUT)
